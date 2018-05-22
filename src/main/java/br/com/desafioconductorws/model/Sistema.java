@@ -92,7 +92,7 @@ public class Sistema {
 
         Cliente aux = clienteDAO.buscarCliente(cpf, cnpj);
         if (aux == null) {
-            return null;
+            throw new Exception("Cliente não encontrado!");
         } else {
             return aux;
         }

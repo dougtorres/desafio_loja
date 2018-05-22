@@ -36,7 +36,7 @@ public class LojaDAO extends DAO<Loja>{
         public Loja buscarLoja(int cnpj) {
 		try {
 			Query q = manager
-					.createQuery("SELECT a FROM Loja a WHERE a.cnpj="+cnpj+"");
+					.createQuery("SELECT a FROM Loja a WHERE a.cnpj="+cnpj);
 			Loja loja = (Loja) q.getSingleResult();
 			return loja;
 		} catch (NoResultException e) {
